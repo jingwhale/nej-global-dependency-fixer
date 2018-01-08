@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+      "module": "commonjs",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "outDir": "./dist",
+      "target": "es5",
+      "preserveConstEnums": true,
+      "sourceMap": true,
+      "noImplicitThis": true,
+      "strict": true,
+      "noImplicitReturns": true,
+      "allowSyntheticDefaultImports": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "rootDir": "src"
+  },
+  "exclude": [
+      "node_modules",
+      "__tests__"
+  ]
+}

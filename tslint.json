@@ -1,0 +1,26 @@
+{
+	"extends": "tslint:recommended",
+	"rules": {
+		"no-unused-expression": true,
+		"no-duplicate-variable": true,
+		"no-unused-variable": false,
+		"curly": true,
+		"class-name": true,
+		"semicolon": [
+			true
+		],
+		"triple-equals": true,
+		"quotemark": [
+			true, "single"
+		],
+		"ordered-imports": false,
+		"space-before-function-paren": false,
+		"eofline": false,
+		"object-literal-sort-keys": [
+			false
+		],
+		"arrow-parens": [false],
+		"no-console": [true, "log"],
+		"no-string-literal": [false]
+	}
+}

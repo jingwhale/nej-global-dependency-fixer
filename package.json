@@ -1,0 +1,63 @@
+{
+  "name": "nej-global-dependency-fixer",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "precommit": "npm run lint && npm run build && npm run test && git add .",
+    "test": "jest -i -c ./scripts/config/jest.config.js",
+    "test:debug": "node --debug-brk=36330 --nolazy node_modules/jest/bin/jest.js -i -c ./scripts/config/jest.config.debug.js",
+    "build": "del-cli ./dist && tsc",
+    "lint": "prettier ./src/**/**/*.ts --write && tslint -p ./tsconfig.json --fix"
+  },
+  "author": "Andy Zhou",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/babel-core": "^6.25.2",
+    "@types/babel-generator": "^6.25.1",
+    "@types/babel-traverse": "^6.25.2",
+    "@types/babel-types": "^6.25.1",
+    "@types/babylon": "^6.16.2",
+    "@types/bluebird": "^3.5.18",
+    "@types/chai": "^4.0.4",
+    "@types/chalk": "^2.2.0",
+    "@types/chance": "^0.7.35",
+    "@types/glob": "^5.0.33",
+    "@types/inquirer": "^0.0.35",
+    "@types/jest": "^20.0.8",
+    "@types/lodash": "^4.14.74",
+    "@types/mkdirp": "^0.5.1",
+    "@types/node": "^8.5.7",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-tester": "^4.0.0",
+    "babel-traverse": "^6.26.0",
+    "chai": "^4.1.2",
+    "del-cli": "^1.1.0",
+    "husky": "^0.14.3",
+    "jest": "^21.0.2",
+    "prettier": "^1.8.1",
+    "ts-jest": "^21.0.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "babel-generator": "^6.26.0",
+    "babel-types": "^6.26.0",
+    "bluebird": "^3.5.1",
+    "chalk": "^2.3.0",
+    "chance": "^1.0.12",
+    "glob": "^7.1.2",
+    "inquirer": "^4.0.0",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "parser": "typescript"
+  }
+}
