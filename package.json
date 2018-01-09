@@ -4,7 +4,6 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "precommit": "npm run lint && npm run build && npm run test && git add .",
     "test": "jest -i -c ./scripts/config/jest.config.js",
     "test:debug": "node --debug-brk=36330 --nolazy node_modules/jest/bin/jest.js -i -c ./scripts/config/jest.config.debug.js",
     "build": "del-cli ./dist && tsc",
