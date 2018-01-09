@@ -5,16 +5,18 @@ var path = require('path');
 
 run({
     exclude: [
-        '**/{deploy,mock,pub,lock,coverage,tools,test,res,node_modules,resources,s,template,h,regularui}/**',
+        '**/{deploy,lib,mail_template,mock,node_modules,pub,res,tool}/**',
     ],
     noWrite: /javascript[\\/]+lib/,
-    projectDir: path.resolve(__dirname, '../../../front-study'),
+    projectDir: path.resolve(__dirname, '../../../front-study-cp'),
     nejPathAliases: {
-        pro: 'src/main/webapp/src/javascript/web/',
-        eutil: 'src/main/webapp//lib/edu-front-util/src/',
-        pool: 'src/main/webapp//lib/',
-        core: 'src/main/webapp//src/javascript/core/',
-        config: 'src/main/webapp//src/javascript/config/'
+        pro: '/src/cp/javascript/',
+        eutil: '/lib/edu-front-util/src/',
+        pool: '/lib/',
+        eui: '/node_modules/@study/edu-front-ui/src/js/',
+        rui: '/node_modules/@study/edu-front-regularUI/src/js/',
+        edu: '/src/edu/javascript/',
+        config: '/lib/cache-config/src/cp/'
     },
     logFilename: path.resolve(__dirname, `../../logs/${Date.now()}.log`),
     logLevels: [
